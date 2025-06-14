@@ -46,8 +46,8 @@ Apache/Nginx
 ### 1. 複製專案
 
 ```bash
-git clone https://github.com/your-username/xinchao-member-management.git
-cd xinchao-member-management
+git clone https://github.com/Harry5566/php_project4.git
+cd php_project4
 ```
 
 ### 2. 設定資料庫
@@ -351,8 +351,8 @@ INSERT INTO ban_reasons (name) VALUES ('您的封鎖原因');
 
 ```bash
 # 複製開發版本
-git clone https://github.com/your-username/xinchao-member-management.git
-cd xinchao-member-management
+git clone https://github.com/Harry5566/php_project4.git
+cd php_project4
 
 # 建立開發分支
 git checkout -b develop
@@ -407,8 +407,8 @@ phpunit tests/
 如果您遇到任何問題，請通過以下方式聯繫我們：
 
 - 📧 Email: support@xinchao.com
-- 💬 Issue: [GitHub Issues](https://github.com/your-username/xinchao-member-management/issues)
-- 📚 Wiki: [專案文檔](https://github.com/your-username/xinchao-member-management/wiki)
+- 💬 Issue: [GitHub Issues](https://github.com/Harry5566/php_project4/issues)
+- 📚 Wiki: [專案文檔](https://github.com/Harry5566/php_project4/wiki)
 
 ## 📝 授權
 
@@ -422,7 +422,7 @@ phpunit tests/
 
 Made with ❤️ by 前端67-第四組
 
-[![GitHub stars](https://img.shields.io/github/stars/your-username/xinchao-member-management.svg?style=social&label=Star)](https://github.com/your-username/xinchao-member-management)
-[![GitHub forks](https://img.shields.io/github/forks/your-username/xinchao-member-management.svg?style=social&label=Fork)](https://github.com/your-username/xinchao-member-management/fork)
+[![GitHub stars](https://img.shields.io/github/stars/Harry5566/php_project4.svg?style=social&label=Star)](https://github.com/Harry5566/php_project4)
+[![GitHub forks](https://img.shields.io/github/forks/Harry5566/php_project4.svg?style=social&label=Fork)](https://github.com/Harry5566/php_project4/fork)
 
 </div>

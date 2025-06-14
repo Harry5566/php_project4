@@ -4,11 +4,12 @@ require_once "./connect.php";
 require_once "./Utilities.php";
 
 include "./SuccessModal.php";
+include "./ErrorModal.php";
 
 date_default_timezone_set("Asia/Taipei");
 
 if (!isset($_GET["id"])) {
-    alertGoTo("請從正常管道進入", "./index.php");
+    alertGoToFail("請從正常管道進入", "./index.php");
     exit;
 }
 
@@ -16,7 +17,7 @@ $memberId = $_GET['id'] ?? 0;
 $reasonId = $_GET['reason'] ?? 0;
 
 if (!$memberId || !$reasonId) {
-    alertGoTo("參數錯誤！", "index.php");
+    alertGoToFail("參數錯誤！", "index.php");
     exit;
 }
 
@@ -29,7 +30,7 @@ try {
     $checkStmt->execute([':member_id' => $memberId]);
 
     if ($checkStmt->fetchColumn() > 0) {
-        alertGoTo("該會員已被封鎖！", "index.php");
+        alertGoToFail("該會員已被封鎖！", "index.php");
         exit;
     }
 
@@ -44,9 +45,9 @@ try {
     if ($result) {
         alertGoTo("會員封鎖成功！", "index.php");
     } else {
-        alertGoTo("封鎖失敗，請重試！", "index.php");
+        alertGoToFail("封鎖失敗，請重試！", "index.php");
     }
 
 } catch (PDOException $e) {
-    alertGoTo("錯誤：" . $e->getMessage(), "index.php");
+    alertGoToFail("錯誤：" . $e->getMessage(), "index.php");
 }

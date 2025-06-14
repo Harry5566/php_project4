@@ -4,12 +4,13 @@ require_once "./connect.php";
 require_once "./Utilities.php";
 
 include "./SuccessModal.php";
+include "./ErrorModal.php";
 
 
 date_default_timezone_set("Asia/Taipei");
 
 if (!isset($_POST["id"])) {
-  alertGoTo("請從正常管道進入", "./index.php");
+  alertGoToFail("請從正常管道進入", "./index.php");
   exit;
 }
 
@@ -102,5 +103,5 @@ try {
 if ($stmt->rowCount() > 0) {
   alertGoTo("更新會員資料成功", "./view.php?id={$id}");
 } else {
-  alertGoTo("沒有資料被更新", "./update.php?id={$id}");
+  alertGoToFail("沒有資料被更新", "./update.php?id={$id}");
 }

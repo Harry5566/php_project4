@@ -4,18 +4,19 @@ require_once "./connect.php";
 require_once "./Utilities.php";
 
 include "./SuccessModal.php";
+include "./ErrorModal.php";
 
 date_default_timezone_set("Asia/Taipei");
 
 if (!isset($_GET["id"])) {
-    alertGoTo("請從正常管道進入", "./index.php");
+    alertGoToFail("請從正常管道進入", "./index.php");
     exit;
 }
 
 $memberId = $_GET['id'] ?? 0;
 
 if (!$memberId) {
-    alertGoTo("參數錯誤！", "index.php");
+    alertGoToFail("參數錯誤！", "index.php");
     exit;
 }
 
@@ -28,9 +29,9 @@ try {
     if ($result) {
         alertGoTo("會員解封成功！", "index.php");
     } else {
-        alertGoTo("解封失敗，請重試！", "index.php");
+        alertGoToFail("解封失敗，請重試！", "index.php");
     }
 
 } catch (PDOException $e) {
-    alertGoTo("錯誤：" . $e->getMessage(), "index.php");
+    alertGoToFail("錯誤：" . $e->getMessage(), "index.php");
 }

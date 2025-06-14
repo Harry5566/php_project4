@@ -30,6 +30,19 @@ function alertGoTo($msg = "", $url = "./pageMsgsList.php")
   </script>";
 }
 
+
+function alertGoToFail($msg = "", $url = "./pageMsgsList.php")
+{
+  echo 
+  "<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      ErrorModalModule.show('{$msg}', function () {
+        window.location.href = '{$url}';
+      });
+    });
+  </script>";
+}
+
 // 有預設值的參數有往最後放
 function timeoutGoBack($time = 1000)
 {

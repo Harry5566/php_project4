@@ -1,12 +1,9 @@
-<!-- SuccessModal.php：共用成功提示模組 -->
-
 <!DOCTYPE html>
 <html lang="zh-Hant">
 
 <head>
     <meta charset="UTF-8">
-    <title>成功提示</title>
-    <!-- Favicon -->
+    <title>錯誤提示</title>
     <link rel="icon" type="image/x-icon" href="./images/logo.ico" />
 
     <!-- Google Fonts -->
@@ -22,7 +19,7 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- Core CSS（你自己的 Bootstrap 相關 CSS） -->
+    <!-- Core CSS -->
     <link rel="stylesheet" href="../assets/vendor/css/core.css" />
     <link rel="stylesheet" href="../assets/css/demo.css" />
 
@@ -30,25 +27,25 @@
     <link rel="stylesheet" href="./css/custom.css">
     <link rel="stylesheet" href="./css/index.css">
 
-    <!-- 自定 JS 設定 -->
+    <!-- JS 設定 -->
     <script src="../assets/vendor/js/helpers.js"></script>
     <script src="../assets/js/config.js"></script>
 </head>
 
 <body>
-    <!-- ✅ 成功提示 Modal HTML -->
-    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+    <!-- ❌ 錯誤提示 Modal -->
+    <div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog modal-dialog-centered modal-sm">
             <div class="modal-content">
                 <div class="modal-body text-center py-4">
                     <div class="mb-3">
-                        <i class="fa-solid fa-check-circle text-success" style="font-size: 3rem;"></i>
+                        <i class="fa-solid fa-xmark-circle text-danger" style="font-size: 3rem;"></i>
                     </div>
-                    <!-- <h5 class="mb-2">操作成功！</h5> -->
-                    <h5 class="text-muted mb-0" id="successMessage">操作已完成</h5>
+                    <!-- <h5 class="mb-2">操作失敗！</h5> -->
+                    <h5 class="text-muted mb-0" id="errorMessage">發生錯誤，請稍後再試</h5>
                 </div>
                 <div class="modal-footer justify-content-center">
-                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">確定</button>
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">確定</button>
                 </div>
             </div>
         </div>
@@ -64,23 +61,23 @@
     <!-- Main JS -->
     <script src="../assets/js/main.js"></script>
 
-    <!-- 自己的 JS -->
+    <!-- 其他模組 JS -->
     <script src="./js/modal-ban.js"></script>
     <script src="./js/modal-unban.js"></script>
     <script src="./js/modal-delete.js"></script>
     <script src="./js/modal-success.js"></script>
 
-    <!-- ✅ SuccessModal JS Module -->
+    <!-- ❌ ErrorModal JS 模組 -->
     <script>
-        const SuccessModalModule = (() => {
-            const modalElement = document.getElementById('successModal');
-            const messageElement = document.getElementById('successMessage');
-            const confirmButton = modalElement.querySelector('.btn-success');
+        const ErrorModalModule = (() => {
+            const modalElement = document.getElementById('errorModal');
+            const messageElement = document.getElementById('errorMessage');
+            const confirmButton = modalElement.querySelector('.btn-danger');
             const modal = new bootstrap.Modal(modalElement);
 
             let onConfirmCallback = null;
 
-            function show(message = "操作已完成", onConfirm = null) {
+            function show(message = "發生錯誤，請稍後再試", onConfirm = null) {
                 messageElement.textContent = message;
                 onConfirmCallback = onConfirm;
                 modal.show();

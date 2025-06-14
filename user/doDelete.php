@@ -4,10 +4,11 @@ require_once "./connect.php";
 require_once "./Utilities.php";
 
 include "./SuccessModal.php";
+include "./ErrorModal.php";
 
 
 if (!isset($_GET["id"])) {
-    alertGoTo("請從正常管道進入", "./index.php");
+    alertGoToFail("請從正常管道進入", "./index.php");
     exit;
 }
 
@@ -25,7 +26,7 @@ try {
     $exists = $checkStmt->fetchColumn();
 
     if ($exists == 0) {
-        alertGoTo("會員不存在或已被刪除", "./index.php");
+        alertGoToFail("會員不存在或已被刪除", "./index.php");
         exit;
     }
 
@@ -36,12 +37,10 @@ try {
         alertGoTo("刪除會員成功", "./index.php");
     } 
     else {
-        alertGoTo("刪除失敗，請重試", "./index.php");
+        alertGoToFail("刪除失敗，請重試", "./index.php");
     }
 
 } catch (PDOException $e) {
     echo "錯誤: {{$e->getMessage()}}";
     exit;
 }
-
-alertGoTo("刪除使用者成功", "./index.php");

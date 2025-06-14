@@ -4,9 +4,10 @@ require_once "./connect.php";
 require_once "./Utilities.php";
 
 include "./SuccessModal.php";
+include "./ErrorModal.php";
 
 if (!isset($_POST["account"])) {
-    alertGoTo("請從正常管道進入", "./login.php");
+    alertGoToFail("請從正常管道進入", "./login.php");
     exit;
 }
 
@@ -37,7 +38,7 @@ try {
 }
 
 if(!$row) {
-    alertAndBack("登入失敗");
+    alertGoToFail("登入失敗", "./index.php");
 }
 else {
     if(password_verify($password, $row["password"])) {
@@ -50,6 +51,6 @@ else {
         alertGoTo("登入成功", "./index.php");
     }
     else {
-        alertAndBack("登入失敗");
+        alertGoToFail("登入失敗", "./index.php");
     }
 }

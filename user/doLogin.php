@@ -3,6 +3,8 @@ session_start();
 require_once "./connect.php";
 require_once "./Utilities.php";
 
+include "./SuccessModal.php";
+
 if (!isset($_POST["account"])) {
     alertGoTo("請從正常管道進入", "./login.php");
     exit;

@@ -65,7 +65,7 @@ try {
     <meta name="description" content="" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="./images/logo.png" />
+    <link rel="icon" type="image/x-icon" href="./images/logo.ico" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />

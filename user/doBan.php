@@ -3,6 +3,8 @@
 require_once "./connect.php";
 require_once "./Utilities.php";
 
+include "./SuccessModal.php";
+
 date_default_timezone_set("Asia/Taipei");
 
 if (!isset($_GET["id"])) {

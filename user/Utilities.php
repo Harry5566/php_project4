@@ -20,10 +20,14 @@ function alertGoBack($msg = "")
 
 function alertGoTo($msg = "", $url = "./pageMsgsList.php")
 {
-  echo "<script>
-          alert('$msg');
-          window.location = '$url';
-        </script>";
+  echo 
+  "<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      SuccessModalModule.show('{$msg}', function () {
+        window.location.href = '{$url}';
+      });
+    });
+  </script>";
 }
 
 // 有預設值的參數有往最後放

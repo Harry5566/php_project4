@@ -142,7 +142,7 @@ $levels = $levelStmt->fetchAll(PDO::FETCH_ASSOC);
             <div class="app-brand justify-content-center mb-4">
               <a href="./login.php" class="app-brand-link gap-2">
                 <span>
-                  <span><img class="w-40px h-40px" src="./images/logo.png" alt=""></span>
+                  <span><img class="w-40px h-40px" src="./images/logo.ico" alt=""></span>
                 </span>
                 <span class="fs-4 fw-bold ms-2 demo text-heading">心橋</span>
               </a>

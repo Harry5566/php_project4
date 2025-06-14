@@ -1,0 +1,591 @@
+/* 基礎 CSS 變數定義 */
+/* 基礎 CSS 變數定義 */
+:root {
+  --bs-primary: #ae431e !important;
+  --bs-success: #8a8b35 !important;
+  --bs-warning: #d06224 !important;
+  --bs-info: #eac790 !important;
+
+  --bs-primary-rgb: 174, 67, 30 !important;
+  --bs-success-rgb: 138, 139, 53 !important;
+  --bs-warning-rgb: 208, 98, 36 !important;
+  --bs-info-rgb: 234, 200, 145 !important;
+
+  /* 一般顏色hover用 */
+  --bs-primary-hover: #8d3519 !important;
+  --bs-success-hover: #6d6f28 !important;
+  --bs-warning-hover: #a74d1b !important;
+  --bs-info-hover: #d4b07b !important;
+
+  /* 漸層背景(用於按鈕) */
+  --bs-primary-gradient: linear-gradient(135deg, #d46743, #742c16) !important;
+  --bs-success-gradient: linear-gradient(135deg, #92943d, #6e6723) !important;
+  --bs-warning-gradient: linear-gradient(135deg, #d06024, #a64513) !important;
+  --bs-info-gradient: linear-gradient(135deg, #ecdbc0, #dfba80) !important;
+
+  /* 漸層背景hover */
+  --bs-primary-gradient-hover: linear-gradient(135deg, #bf5132, #5c2313) !important;
+  --bs-success-gradient-hover: linear-gradient(135deg, #7f812f, #54501d) !important;
+  --bs-warning-gradient-hover: linear-gradient(135deg, #b54f1e, #873910) !important;
+  --bs-info-gradient-hover: linear-gradient(135deg, #d1c0a8, #caa66b) !important;
+
+  /* 文字顏色(深色) */
+  --bs-primary-text-emphasis: #631f0f !important;
+  --bs-success-text-emphasis: #3d3a07 !important;
+  --bs-warning-text-emphasis: #805b07 !important;
+  --bs-info-text-emphasis: #5b3014 !important;
+
+  /* 淺色背景（用於標籤） */
+  --bs-primary-bg-subtle: #ffd6ca !important;
+  --bs-success-bg-subtle: #f8f0af !important;
+  --bs-warning-bg-subtle: #ffedbc !important;
+  --bs-info-bg-subtle: #fcdcc9 !important;
+
+  /* 邊框 */
+  --bs-primary-border-subtle: #e7b7a7 !important;
+  --bs-success-border-subtle: #e3d898 !important;
+  --bs-warning-border-subtle: #f8e1b8 !important;
+  --bs-info-border-subtle: #efc8aa !important;
+
+  /* 連結、標題、背景 */
+  --bs-link-color: var(--bs-primary) !important;
+  --bs-link-hover-color: var(--bs-primary-hover) !important;
+  --bs-heading-color: #3d2a21 !important;
+
+  /* 分頁控制元件 */
+  --bs-pagination-color: var(--bs-primary) !important;
+  --bs-pagination-hover-color: #fff !important;
+  --bs-pagination-bg: #fff !important;
+  --bs-pagination-border-color: var(--bs-primary) !important;
+  --bs-pagination-hover-bg: var(--bs-primary) !important;
+  --bs-pagination-hover-border-color: var(--bs-primary) !important;
+  --bs-pagination-active-bg: var(--bs-primary) !important;
+  --bs-pagination-active-border-color: var(--bs-primary) !important;
+
+  /* 強調色 */
+  --bs-emphasis-color: var(--bs-primary) !important;
+  --bs-emphasis-color-rgb: var(--bs-primary-rgb) !important;
+  --bs-secondary-color: #a7acb2 !important;
+  --bs-body-color: #4a403c !important;
+
+  /* 按鈕變數 */
+  --bs-btn-bg: var(--bs-primary) !important;
+  --bs-btn-border-color: var(--bs-primary) !important;
+  --bs-btn-hover-bg: var(--bs-primary-hover) !important;
+  --bs-btn-hover-border-color: var(--bs-primary-hover) !important;
+  --bs-btn-active-bg: var(--bs-primary-hover) !important;
+  --bs-btn-active-border-color: var(--bs-primary-hover) !important;
+
+  --bs-sidebar-gradient: linear-gradient(135deg, #ae431e, #d46743) !important;
+}
+
+/* sidebar 顏色改紅棕背景 */
+.layout-menu,
+.layout-menu.bg-menu-theme {
+  background: var(--bs-primary-gradient) !important;
+  box-shadow: 2px 0 8px rgba(174, 67, 30, 0.15) !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.layout-menu .app-brand {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02)) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.layout-menu .app-brand-link {
+  color: var(--bs-primary-gradient) !important;
+  text-decoration: none !important;
+}
+
+.menu .app-brand .layout-menu-toggle {
+  position: absolute;
+  z-index: 3;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--bs-primary);
+  inset-inline-start: 15.2rem;
+  opacity: 1;
+}
+
+a.layout-menu-toggle {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.layout-menu .app-brand-text {
+  color: #fff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4) !important;
+}
+
+
+.layout-menu .menu-item .menu-link {
+  transition: all 0.3s ease !important;
+  border-radius: 8px !important;
+  margin: 2px 8px !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.menu-text {
+  color: rgb(255, 255, 255, 0.9);
+}
+
+.menu-text:hover {
+  color: #fff;
+}
+
+.layout-menu .menu-item .menu-link:hover {
+  color: #fff !important;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2)) !important;
+}
+
+.layout-menu .menu-item.active>.menu-link {
+  font-weight: bold;
+  color: #fff !important;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2)) !important;
+}
+
+/* 主選單 hover 左滑光效果 */
+.menu-inner>.menu-item>.menu-link {
+  position: relative;
+  z-index: 1;
+}
+
+.menu-inner>.menu-item>.menu-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+  transition: width 0.3s ease;
+  z-index: 0;
+}
+
+.menu-inner>.menu-item>.menu-link:hover::before {
+  width: 100%;
+}
+
+.menu-inner>.menu-item>.menu-link:hover {
+  color: #fff !important;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2)) !important;
+}
+
+
+/* Layout Page 容器修正 */
+.layout-page {
+  background-color: #f1e3d9 !important;
+  transition: none !important;
+}
+
+.layout-page * {
+  transition: color 0.2s ease, background-color 0.2s ease !important;
+}
+
+/* App Brand Logo 區域 */
+.app-brand-link {
+  color: #ae431e !important;
+  text-decoration: none !important;
+}
+
+.app-brand-link:hover {
+  color: #8d3519 !important;
+}
+
+.app-brand-text {
+  color: #fff4f4 !important;
+}
+
+/* 選單切換按鈕 */
+.layout-menu-toggle {
+  color: #ae431e !important;
+}
+
+.layout-menu-toggle:hover {
+  color: #8d3519 !important;
+}
+
+/* 選單分隔線 */
+.menu-divider {
+  border-color: rgba(174, 67, 30, 0.1) !important;
+}
+
+
+/* 導航欄 (Navbar) */
+.navbar-nav .nav-link {
+  color: #4a403c !important;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link.active {
+  color: #ae431e !important;
+}
+
+.navbar-brand {
+  color: #ae431e !important;
+}
+
+.navbar-brand:hover {
+  color: #8d3519 !important;
+}
+
+/* 麵包屑 (Breadcrumb) */
+.breadcrumb-item a {
+  color: #ae431e !important;
+  text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+  color: #8d3519 !important;
+}
+
+.breadcrumb-item.active {
+  color: #4a403c !important;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+  color: #a7acb2 !important;
+}
+
+/* 分頁 (Pagination) - 淺色 hover */
+.pagination .page-link {
+  color: #ae431e !important;
+  background-color: #fff !important;
+  border-color: none !important;
+  transition: all 0.2s ease !important;
+}
+
+.pagination .page-link:hover {
+  color: #ae431e !important;
+  background-color: rgba(174, 67, 30, 0.08) !important;
+  border-color: none !important;
+}
+
+.pagination .page-link:focus {
+  color: #ae431e !important;
+  background-color: rgba(174, 67, 30, 0.05) !important;
+  border-color: rgba(174, 67, 30, 0.3) !important;
+  box-shadow: 0 0 0 0.2rem rgba(174, 67, 30, 0.15) !important;
+}
+
+.pagination .page-item.active .page-link {
+  color: #fff !important;
+  background-color: #ae431e !important;
+  border-color: #ae431e !important;
+}
+
+.pagination .page-item.disabled .page-link {
+  color: #a7acb2 !important;
+  background-color: #fff !important;
+  border-color: #e4e6e8 !important;
+}
+
+/* 標籤頁 (Tabs) */
+.nav-tabs .nav-link {
+  color: #4a403c !important;
+}
+
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link:focus {
+  color: #ae431e !important;
+  border-color: transparent transparent #ae431e transparent !important;
+}
+
+.nav-tabs .nav-link.active {
+  color: #ae431e !important;
+  background-color: #fff !important;
+  border-color: #ae431e #ae431e #fff #ae431e !important;
+}
+
+/* 藥片標籤頁 (Pills) */
+.nav-pills .nav-link {
+  color: #4a403c !important;
+}
+
+.nav-pills .nav-link:hover,
+.nav-pills .nav-link:focus {
+  color: #ae431e !important;
+  background-color: rgba(174, 67, 30, 0.1) !important;
+}
+
+.nav-pills .nav-link.active {
+  color: #fff !important;
+  background-color: #ae431e !important;
+}
+
+/* 下拉選單 */
+.dropdown-menu .dropdown-item {
+  color: #4a403c !important;
+}
+
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus {
+  color: #ae431e !important;
+  background-color: rgba(174, 67, 30, 0.1) !important;
+}
+
+.dropdown-menu .dropdown-item.active {
+  color: #fff !important;
+  background-color: #ae431e !important;
+}
+
+/* 按鈕組件 */
+.btn-primary {
+  --bs-btn-color: #fff !important;
+  --bs-btn-bg: #ae431e !important;
+  --bs-btn-hover-color: #fff !important;
+  --bs-btn-hover-bg: #8d3519 !important;
+}
+
+.btn-success {
+  --bs-btn-color: #fff !important;
+  --bs-btn-bg: #8a8b35 !important;
+  --bs-btn-hover-color: #fff !important;
+  --bs-btn-hover-bg: #6d6f28 !important;
+}
+
+.btn-warning {
+  --bs-btn-color: #fff !important;
+  --bs-btn-bg: #d06224 !important;
+  --bs-btn-hover-color: #fff !important;
+  --bs-btn-hover-bg: #a74d1b !important;
+}
+
+.btn-info {
+  --bs-btn-color: #8a5b33 !important;
+  --bs-btn-bg: #eac790 !important;
+  --bs-btn-hover-color: #fff !important;
+  --bs-btn-hover-bg: #d4b07b !important;
+}
+
+/* 漸層按鈕 */
+.btn-gradient-primary {
+  background: linear-gradient(135deg, #d46743, #742c16) !important;
+  color: #fff !important;
+  border: none !important;
+}
+
+.btn-gradient-primary:hover {
+  background: linear-gradient(135deg, #bf5132, #5c2313) !important;
+  color: #fff !important;
+}
+
+.btn-gradient-success {
+  background: linear-gradient(135deg, #92943d, #6e6723) !important;
+  color: #fff !important;
+  border: none !important;
+}
+
+.btn-gradient-success:hover {
+  background: linear-gradient(135deg, #7f812f, #54501d) !important;
+  color: #fff !important;
+}
+
+.btn-gradient-warning {
+  background: linear-gradient(135deg, #d06024, #a64513) !important;
+  color: #fff !important;
+  border: none !important;
+}
+
+.btn-gradient-warning:hover {
+  background: linear-gradient(135deg, #b54f1e, #873910) !important;
+  color: #fff !important;
+}
+
+.btn-gradient-info {
+  background: linear-gradient(135deg, #ecdbc0, #dfba80) !important;
+  color: #8a5b33 !important;
+  border: none !important;
+}
+
+.btn-gradient-info:hover {
+  background: linear-gradient(135deg, #d1c0a8, #caa66b) !important;
+  color: #fff !important;
+}
+
+/* 標籤樣式 */
+.bg-label-primary {
+  background: linear-gradient(135deg, rgba(174, 66, 30, 0.377), rgba(174, 67, 30, 0.20)) !important;
+  color: #8f2400 !important;
+}
+
+.bg-label-warning {
+  background: linear-gradient(135deg, rgba(250, 230, 115, 0.822), rgba(243, 229, 149, 0.568)) !important;
+  color: #8b5c04 !important;
+}
+
+.bg-label-success {
+  background: linear-gradient(135deg, rgba(128, 148, 57, 0.473), rgba(154, 139, 53, 0.397)) !important;
+  color: #4d6323 !important;
+}
+
+.bg-label-info {
+  background: linear-gradient(135deg, rgba(241, 145, 1, 0.425), rgba(241, 143, 1, 0.20)) !important;
+  color: #b15e00 !important;
+}
+
+/* 表單控制項  */
+
+.input-group:focus {
+  outline: none !important;
+  border-color: rgba(174, 67, 30, 0.5) !important;
+  box-shadow: 0 0 0 0.2rem rgba(174, 67, 30, 0.25) !important;
+}
+
+/* 連結通用樣式 */
+/* a {
+  color: #ae431e !important;
+}
+
+a:hover {
+  color: #8d3519 !important;
+} */
+
+/* 警告框 */
+.alert-primary {
+  --bs-alert-color: #631f0f !important;
+  --bs-alert-bg: #ffd6ca !important;
+  --bs-alert-border-color: #e7b7a7 !important;
+}
+
+.alert-success {
+  --bs-alert-color: #3d3a07 !important;
+  --bs-alert-bg: #f8f0af !important;
+  --bs-alert-border-color: #e3d898 !important;
+}
+
+.alert-warning {
+  --bs-alert-color: #805b07 !important;
+  --bs-alert-bg: #ffedbc !important;
+  --bs-alert-border-color: #f8e1b8 !important;
+}
+
+.alert-info {
+  --bs-alert-color: #5b3014 !important;
+  --bs-alert-bg: #fcdcc9 !important;
+  --bs-alert-border-color: #efc8aa !important;
+}
+
+/* 進度條 */
+.progress-bar {
+  background-color: #ae431e !important;
+}
+
+.progress-bar-striped {
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent) !important;
+}
+
+/* 徽章 */
+.badge.bg-primary {
+  background-color: #ae431e !important;
+}
+
+.badge.bg-success {
+  background-color: #8a8b35 !important;
+}
+
+.badge.bg-warning {
+  background-color: #d06224 !important;
+}
+
+.badge.bg-info {
+  background-color: #eac790 !important;
+  color: #8a5b33 !important;
+}
+
+/* 卡片邊框 */
+.card.border-primary {
+  border-color: #ae431e !important;
+}
+
+.card-header.bg-primary {
+  background-color: #ae431e !important;
+  color: #fff !important;
+}
+
+/* 確保高特異性覆蓋 */
+body .btn-primary,
+html .btn-primary {
+  background-color: #ae431e !important;
+  border-color: #ae431e !important;
+}
+
+body .btn-primary:hover,
+html .btn-primary:hover {
+  background-color: #8d3519 !important;
+  border-color: #8d3519 !important;
+}
+
+/* 其他設定 */
+.w-40px {
+  width: 40PX;
+}
+
+.h-40px {
+  height: 40px;
+}
+
+.fs-6px {
+  font-size: 6px;
+}
+
+.no-padding-container {
+  padding-left: 60px !important;
+  padding-right: 60px !important;
+  max-width: 100% !important;
+}
+
+.full-width-card {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+tbody tr:hover {
+  background-color: #ffede6;
+}
+
+.truncate-td {
+  max-width: 120px;
+
+  @media (width > 1700px) {
+    max-width: 350px;
+  }
+}
+
+#add-notice:hover {
+  cursor: pointer;
+  color: var(--bs-warning) !important;
+}
+
+.preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 圓形按鈕組合 */
+.btn-circle {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  padding: 0;
+}
+
+.btn-circle i {
+  font-size: 16px;
+  position: relative;
+  top: 1px;
+  left: 1.5px;
+}
+
+/* 修正可能的 success RGB 值錯誤 */
+:root[data-bs-theme="light"] {
+  --bs-success-rgb: 138, 139, 53 !important;
+}

@@ -1,0 +1,117 @@
+    .avatar-sm {
+      width: 35px;
+      height: 35px;
+      object-fit: contain;
+    }
+
+    .member-status {
+      font-size: 0.75rem;
+    }
+
+    .search-section {
+      background: #fff;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+
+    .action-buttons .btn {
+      margin: 2px;
+      width: 35px;
+      height: 35px;
+    }
+
+    .member-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .pagination-info {
+      font-size: 0.875rem;
+      color: #6c757d;
+    }
+
+    /* 排序功能樣式 */
+    .sortable-header {
+      cursor: pointer;
+      user-select: none;
+      position: relative;
+      transition: background-color 0.2s ease;
+      padding-right: 25px !important;
+    }
+
+    .sortable-header:hover {
+      background-color: #ffede6;
+    }
+
+    .sort-icons {
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      opacity: 0.6;
+      transition: opacity 0.2s ease;
+    }
+
+    .sortable-header:hover .sort-icons {
+      opacity: 1;
+    }
+
+    .sort-icon {
+      font-size: 12px;
+      line-height: 1;
+      color: #ae431e;
+    }
+
+    .sort-icon.up {
+      margin-bottom: 1px;
+    }
+
+    .sort-icon.down {
+      margin-top: 1px;
+    }
+
+    .sortable-header.asc .sort-icon.up {
+      color: rgb(73, 62, 0);
+      opacity: 1;
+    }
+
+    .sortable-header.desc .sort-icon.down {
+      color: rgba(73, 62, 0);
+      opacity: 1;
+    }
+
+    .sortable-header.active {
+      background-color: #ffede6;
+    }
+
+    .zz-index {
+      z-index: 4;
+    }
+
+    .placeholder-color::placeholder {
+      font-weight: bold;
+      color: #888;
+      opacity: 1;
+    }
+
+    .color-vip {
+      background-color: color-mix(in srgb, #fff 84%, #03c3ec) !important;
+      color: #03c3ec !important;
+    }
+
+    .z-4 {
+      z-index: 4;
+    }
+
+    .head {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      margin-right: 2px;
+      object-fit: cover;
+    }

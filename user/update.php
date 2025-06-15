@@ -65,7 +65,7 @@ try {
     <meta name="description" content="" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="./images/logo.ico" />
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon/vnlogo-ic.ico" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -89,6 +89,18 @@ try {
     <!-- update.css -->
     <link rel="stylesheet" href="./css/update.css">
 
+    <style>
+        .app-brand {
+            min-height: 150px;
+        }
+
+        .logo {
+            max-height: 180px;
+            width: auto;
+            display: block;
+        }
+    </style>
+
     <script src="../assets/vendor/js/helpers.js"></script>
     <script src="../assets/js/config.js"></script>
 </head>
@@ -100,12 +112,12 @@ try {
 
             <!-- Menu -->
             <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
-                <div class="app-brand demo">
+                <div class="app-brand demo d-flex justify-content-center align-items-center">
                     <a href="index.php" class="app-brand-link">
                         <span>
-                            <span><img class="w-40px h-40px" src="./images/logo.png" alt=""></span>
+                            <span><img class="logo" src="../assets/img/favicon/vnlogo.png" alt=""></span>
                         </span>
-                        <span class="fs-4 fw-bold ms-2 app-brand-text demo menu-text align-items-center">心橋</span>
+                        <!-- <span class="fs-4 fw-bold ms-2 app-brand-text demo menu-text align-items-center">心橋</span> -->
                     </a>
 
                     <a href="javascript:void(0);" class="layout-menu-toggle menu-link ms-auto">
@@ -222,7 +234,8 @@ try {
                         <li class="menu-item row justify-content-center">
                             <a href="./doLogout.php"
                                 class="btn rounded-pill btn-gradient-success btn-ban col-10 justify-content-center">
-                                <div class="menu-text fw-bold"><i class="fa-solid fa-arrow-right-from-bracket me-2"></i>登出</div>
+                                <div class="menu-text fw-bold"><i
+                                        class="fa-solid fa-arrow-right-from-bracket me-2"></i>登出</div>
                             </a>
                         </li>
                     </div>

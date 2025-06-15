@@ -18,7 +18,7 @@ require_once "./connect.php";
     <meta name="description" content="" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="./images/logo.ico" />
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon/vnlogo-ic.ico" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -83,6 +83,12 @@ require_once "./connect.php";
         .authentication-wrapper.authentication-basic .authentication-inner {
             max-inline-size: 360px;
         }
+
+        .logo {
+            max-height: 180px;
+            width: auto;
+            display: block;
+        }
     </style>
 
     <script src="../assets/vendor/js/helpers.js"></script>
@@ -107,7 +113,8 @@ require_once "./connect.php";
 
                         <hr>
 
-                        <form id="memberForm" class="mb-4" action="./doLogin.php" method="post" enctype="multipart/form-data">
+                        <form id="memberForm" class="mb-4" action="./doLogin.php" method="post"
+                            enctype="multipart/form-data">
 
                             <!-- 帳號與密碼 -->
 
@@ -145,9 +152,9 @@ require_once "./connect.php";
                             <div class="d-flex justify-content-center">
                                 <a href="" class="d-flex align-items-end">
                                     <span>
-                                        <span><img class="w-40px h-40px" src="./images/logo.png" alt=""></span>
+                                        <span><img class="logo" src="../assets/img/favicon/logo-main.png" alt=""></span>
                                     </span>
-                                    <span class="fs-4 fw-bold ms-2 demo text-heading">心橋</span>
+                                    <!-- <span class="fs-4 fw-bold ms-2 demo text-heading">心橋</span> -->
                                 </a>
                             </div>
 

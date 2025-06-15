@@ -29,7 +29,7 @@ $levels = $levelStmt->fetchAll(PDO::FETCH_ASSOC);
   <meta name="description" content="" />
 
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="./images/logo.png" />
+  <link rel="icon" type="image/x-icon" href="../assets/img/favicon/vnlogo-ic.ico" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -124,6 +124,12 @@ $levels = $levelStmt->fetchAll(PDO::FETCH_ASSOC);
       border-color: #ae431e;
       background-color: rgba(141, 52, 25, 0.2);
     }
+
+    .logo {
+      max-height: 180px;
+      width: auto;
+      display: block;
+    }
   </style>
 
   <script src="../assets/vendor/js/helpers.js"></script>
@@ -142,16 +148,16 @@ $levels = $levelStmt->fetchAll(PDO::FETCH_ASSOC);
             <div class="app-brand justify-content-center mb-4">
               <a href="./login.php" class="app-brand-link gap-2">
                 <span>
-                  <span><img class="w-40px h-40px" src="./images/logo.ico" alt=""></span>
+                  <span><img class="logo" src="../assets/img/favicon/logo-main.png" alt=""></span>
                 </span>
-                <span class="fs-4 fw-bold ms-2 demo text-heading">心橋</span>
+                <!-- <span class="fs-4 fw-bold ms-2 demo text-heading">心橋</span> -->
               </a>
             </div>
 
             <div class="text-center mb-4">
-              <h3 class="text-primary">
+              <h5 class="text-primary">
                 <i class="fas fa-user-plus me-2"></i>新增會員
-              </h3>
+              </h5>
               <p class="text-muted">歡迎加入心橋旅遊大家庭！🌟</p>
             </div>
 

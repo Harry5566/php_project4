@@ -109,7 +109,7 @@ function getGenderIcon($gender)
   <meta name="description" content="" />
 
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="./images/logo.ico" />
+  <link rel="icon" type="image/x-icon" href="../assets/img/favicon/vnlogo-ic.ico" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -179,6 +179,16 @@ function getGenderIcon($gender)
       margin-right: 2px;
       object-fit: cover;
     }
+
+    .app-brand {
+      min-height: 150px;
+    }
+
+    .logo {
+      max-height: 180px;
+      width: auto;
+      display: block;
+    }
   </style>
 
   <script src="../assets/vendor/js/helpers.js"></script>
@@ -192,12 +202,12 @@ function getGenderIcon($gender)
 
       <!-- Menu -->
       <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
-        <div class="app-brand demo">
+        <div class="app-brand demo d-flex justify-content-center align-items-center">
           <a href="index.php" class="app-brand-link">
             <span>
-              <span><img class="w-40px h-40px" src="./images/logo.png" alt=""></span>
+              <span><img class="logo" src="../assets/img/favicon/vnlogo.png" alt=""></span>
             </span>
-            <span class="fs-4 fw-bold ms-2 app-brand-text demo menu-text align-items-center">心橋</span>
+            <!-- <span class="fs-4 fw-bold ms-2 app-brand-text demo menu-text align-items-center">心橋</span> -->
           </a>
 
           <a href="javascript:void(0);" class="layout-menu-toggle menu-link ms-auto">

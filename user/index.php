@@ -214,7 +214,7 @@ function getGenderIcon($gender)
   <meta name="description" content="" />
 
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="./images/logo.ico" />
+  <link rel="icon" type="image/x-icon" href="../assets/img/favicon/vnlogo-ic.ico" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -238,6 +238,17 @@ function getGenderIcon($gender)
   <!-- index.css -->
   <link rel="stylesheet" href="./css/index.css">
 
+  <style>
+    .app-brand {
+      min-height: 150px;
+    }
+    .logo {
+      max-height: 180px;
+      width: auto;
+      display: block;
+    }
+  </style>
+
   <script src="../assets/vendor/js/helpers.js"></script>
   <script src="../assets/js/config.js"></script>
 </head>
@@ -249,12 +260,12 @@ function getGenderIcon($gender)
 
       <!-- Menu -->
       <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
-        <div class="app-brand demo">
+        <div class="app-brand demo d-flex justify-content-center align-items-center">
           <a href="index.php" class="app-brand-link">
             <span>
-              <span><img class="w-40px h-40px" src="./images/logo.png" alt=""></span>
+              <span><img class="logo" src="../assets/img/favicon/vnlogo.png" alt=""></span>
             </span>
-            <span class="fs-4 fw-bold ms-2 app-brand-text demo menu-text align-items-center">心橋</span>
+            <!-- <span class="fs-4 fw-bold ms-2 app-brand-text demo menu-text align-items-center">心橋</span> -->
           </a>
 
           <a href="javascript:void(0);" class="layout-menu-toggle menu-link ms-auto">
@@ -275,7 +286,7 @@ function getGenderIcon($gender)
           <li class="menu-item active open">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
               <i class=" fa-solid fa-users me-4"></i>
-              <div class="menu-text fw-bold" data-i18n="Dashboards">會員管理</div>
+              <div class="menu-text fw-bold fs-5" data-i18n="Dashboards">會員管理</div>
             </a>
             <ul class="menu-sub">
               <li class="menu-item active">
@@ -288,11 +299,6 @@ function getGenderIcon($gender)
                   <div class="menu-text fw-bold">新增會員</div>
                 </a>
               </li>
-              <li class="menu-item">
-                <a href="deletedMembers.php" class="menu-link">
-                  <div class="menu-text fw-bold">已刪除會員</div>
-                </a>
-              </li>
             </ul>
           </li>
 
@@ -300,7 +306,7 @@ function getGenderIcon($gender)
           <li class="menu-item">
             <a href="productTrip-Index.php" class="menu-link menu-toggle">
               <i class="fa-solid fa-map-location-dot me-2 menu-text"></i>
-              <div class="menu-text fw-bold" data-i18n="Layouts">商品管理</div>
+              <div class="menu-text fw-bold fs-5" data-i18n="Layouts">商品管理</div>
             </a>
 
             <ul class="menu-sub">
@@ -321,7 +327,7 @@ function getGenderIcon($gender)
           <li class="menu-item">
             <a href="#" class="menu-link menu-toggle">
               <i class="fa-solid fa-ticket me-2 menu-text"></i>
-              <div class="menu-text fw-bold" data-i18n="Dashboards">票券管理</div>
+              <div class="menu-text fw-bold fs-5" data-i18n="Dashboards">票券管理</div>
             </a>
             <ul class="menu-sub">
               <li class="menu-item active">
@@ -341,7 +347,7 @@ function getGenderIcon($gender)
           <li class="menu-item">
             <a href="#" class="menu-link menu-toggle">
               <i class="fa-solid fa-tags me-2 menu-text"></i>
-              <div class="menu-text fw-bold" data-i18n="Dashboards">優惠券管理</div>
+              <div class="menu-text fw-bold fs-5" data-i18n="Dashboards">優惠券管理</div>
             </a>
             <ul class="menu-sub">
               <li class="menu-item active">
@@ -1052,7 +1058,6 @@ function getGenderIcon($gender)
   <script src="./js/modal-ban.js"></script>
   <script src="./js/modal-unban.js"></script>
   <script src="./js/modal-delete.js"></script>
-  <script src="./js/modal-success.js"></script>
 
 
   <script>
